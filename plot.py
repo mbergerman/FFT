@@ -23,7 +23,7 @@ data = [ f(t/n) for t in range(n) ]
 plt.figure(figsize = (12, 5))
 plt.plot(data)
 plt.grid()
-plt.savefig('input.png', dpi=300)
+plt.savefig('images/input.png', dpi=300)
 plt.show()
 
 python_dir = os.path.dirname(__file__)
@@ -54,7 +54,7 @@ with open(output_path, "r") as file:
     ax2.grid()
 
     plt.tight_layout()
-    plt.savefig('output.png', dpi=300)
+    plt.savefig('images/output.png', dpi=300)
     plt.show()
 
 # %%
