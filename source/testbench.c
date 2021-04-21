@@ -14,7 +14,7 @@ int main() {
     
     int n;
     fscanf(fp,"%d", &n);
-    printf("La cantidad de muestras es: %d", n);
+    printf("\nLa cantidad de muestras es: %d\n", n);
     
     float complex *input = (float complex*)malloc(sizeof(float complex)*n);
     float complex *output = (float complex*)malloc(sizeof(float complex)*n);
@@ -37,6 +37,9 @@ int main() {
     }
 
     fclose(fp);
+
+    free(input);
+    free(output);
 
     return 0;
 }

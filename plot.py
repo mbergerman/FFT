@@ -24,7 +24,7 @@ plt.figure(figsize = (12, 5))
 plt.plot(data)
 plt.grid()
 plt.savefig('input.png', dpi=300)
-plt.clf()
+plt.show()
 
 python_dir = os.path.dirname(__file__)
 input_path = os.path.join(python_dir, "data/input.txt")
@@ -36,8 +36,8 @@ with open(input_path, "w+") as file:
     for x in data:
         file.write(str(x) + '\n')
 
+#%%
 os.system(buildandrun_path)
-os.system("\n")
 
 #%%
 with open(output_path, "r") as file:
@@ -45,11 +45,11 @@ with open(output_path, "r") as file:
     for x in file.readlines():
         data.append( stringToComplex(x) )
         
-    fig, (ax1, ax2) = plt.subplots(2, 1, figsize = (12, 10))
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize = (12, 8))
     ax1.plot([abs(x) for x in data])
     ax1.set_title('Valor absoluto')
     ax1.grid()
-    ax2.plot([phase(x) for x in data], label='Fase')
+    ax2.plot([phase(x) for x in data])
     ax2.set_title('Fase')
     ax2.grid()
 

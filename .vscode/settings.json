@@ -1,6 +1,9 @@
 {
     "files.associations": {
-        "complex": "c"
+        "complex": "c",
+        "xiosbase": "c",
+        "xlocale": "c",
+        "cmath": "c"
     },
     "python.pythonPath": "C:\\Users\\matia\\AppData\\Local\\Programs\\Python\\Python37-32\\python.exe"
 }
